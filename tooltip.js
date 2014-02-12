@@ -17,6 +17,8 @@
     Plugin.prototype = {
 
         init: function() {
+
+         return this.element.css("color", "red");
             
         },
 
