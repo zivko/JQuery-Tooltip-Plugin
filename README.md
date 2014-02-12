@@ -5,7 +5,6 @@ Tooltip is a small and simple jQuery tooltip plugin.
 
 ## Usage
 
-## Usage
 
 1. Include jQuery:
 
