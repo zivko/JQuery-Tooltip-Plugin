@@ -1,3 +1,9 @@
+/*
+ *  jQuery Tooltips - v1
+ *
+ *  Made by Zivko Sudarski
+ *  Under MIT License
+ */
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
 ;(function ( $, window, document, undefined ) {
@@ -20,7 +26,7 @@
 
         init: function() {
 
-         return $(this.element).each(function() {
+         $(this.element).each(function() {
 
          var tipr_cont = '.tipr_container_' + defaults.mode;
     
@@ -46,19 +52,23 @@
                     }     
                );
         
-         });  
-            
+         });        
         },
 
     };
 
+    // A really lightweight plugin wrapper around the constructor,
+    // preventing against multiple instantiations
     $.fn[pluginName] = function ( options ) {
-        return this.each(function () {
+        this.each(function () {
             if (!$.data(this, "plugin_" + pluginName)) {
                 $.data(this, "plugin_" + pluginName,
                 new Plugin( this, options ));
             }
         });
+        
+	// chain jQuery functions
+	return this;
     };
 
 })( jQuery, window, document );
