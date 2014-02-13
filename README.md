@@ -25,5 +25,7 @@ Tooltip is a small and simple jQuery tooltip plugin.
 
 4. Plugin call 
        ```js
-       $("#element").tooltip();
+       //parameter : speed - int value (100, 200..etc).Default : 200
+       //parameter:  mode - string value (bottom, top).Default: bottom
+       $("#element").tooltip({speed:200, mode: "bottom"});
        ```
